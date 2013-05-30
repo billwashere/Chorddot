@@ -37,7 +37,7 @@ int findsuc(size_t node) {
 	do {
   		it = find (available_nodes_.begin(), available_nodes_.end(), node);
 		++node;
-		if(node > size_) node = node % size_;
+		if(node > size_) node = node % (size_+1);
 
 	} while(it == available_nodes_.end());
 	return *it;
